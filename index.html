@@ -607,6 +607,69 @@ tbody td{ border-bottom: 1px solid rgba(15,23,42,.06) !important; }
   border-color: rgba(15,23,42,.24) !important;
   color: rgba(15,23,42,.70) !important;
 }
+    /* ===== メンバー&条件：文字の濃さを全部そろえる ===== */
+
+/* 1) そろえる濃さ（ここだけ触れば全体調整できる） */
+.card.members{
+  --mText: #0b1220;                 /* 文字の基準色（濃い黒寄り） */
+  --mLine: rgba(15,23,42,.28);      /* 枠線の基準濃さ */
+}
+
+/* 2) メンバー&条件内の主要テキストを全部同じ濃さに */
+.card.members .title,
+.card.members .hint,
+.card.members .hcell,
+.card.members .tcell,
+.card.members .listHead,
+.card.members .listTotal,
+.card.members label,
+.card.members b{
+  color: var(--mText) !important;
+  opacity: 1 !important;
+}
+
+/* 3) 「ローテ本数:」「合計」などの薄色指定を無効化（原因潰し） */
+.card.members .listTotal{
+  color: var(--mText) !important;
+}
+.card.members .listHead{
+  color: var(--mText) !important;
+}
+
+/* 4) 入力文字（名前・P連続・C連続）も同じ濃さに */
+.card.members input[type="text"],
+.card.members input[type="number"]{
+  color: var(--mText) !important;
+  -webkit-text-fill-color: var(--mText) !important;
+  caret-color: var(--mText) !important;
+}
+
+/* 5) 枠線も統一して同じくらい濃く */
+.card.members{
+  border-color: var(--mLine) !important;
+}
+.card.members .card-h{
+  border-bottom: 1px solid var(--mLine) !important;
+}
+.card.members .row,
+.card.members .listHead{
+  border-color: var(--mLine) !important;
+}
+.card.members input[type="text"],
+.card.members input[type="number"]{
+  border-color: var(--mLine) !important;
+}
+.card.members .checkCell,
+.card.members .del{
+  border-color: var(--mLine) !important;
+}
+
+/* 6) もし「薄くするCSS」が残っていて負けてる場合の保険 */
+.card.members .hint,
+.card.members label{
+  filter: none !important;
+  text-shadow: none !important;
+}
   </style>
 </head>
 
