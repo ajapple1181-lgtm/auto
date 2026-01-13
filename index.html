@@ -561,6 +561,52 @@ tbody td{ border-bottom: 1px solid rgba(15,23,42,.06) !important; }
   color: rgba(15,23,42,.72) !important;
   border-color: rgba(15,23,42,.10) !important;
 }
+    /* ===== メンバー&条件：文字・枠線を濃く ===== */
+
+/* 見出し（メンバー&条件 / Pなど） */
+.card.members .title{
+  color: #0b1220 !important;
+}
+.card.members .hint{
+  color: rgba(15,23,42,.78) !important;
+}
+.card.members label{
+  color: rgba(15,23,42,.78) !important;
+}
+
+/* 入力中の文字（名前・P連続・C連続） */
+.card.members input[type="text"],
+.card.members input[type="number"]{
+  color: #0b1220 !important;
+  -webkit-text-fill-color: #0b1220 !important;
+  caret-color: #0b1220 !important;
+}
+
+/* 罫線（カード枠 / 各行枠 / 見出し枠）を太く・濃く */
+.card.members{
+  border-color: rgba(15,23,42,.28) !important;
+}
+.card.members .card-h{
+  border-bottom: 1px solid rgba(15,23,42,.24) !important;
+}
+
+.card.members .row,
+.card.members .listHead{
+  border-color: rgba(15,23,42,.26) !important;
+  border-width: 1px !important;
+}
+
+/* 入力欄の枠線を濃く */
+.card.members input[type="text"],
+.card.members input[type="number"]{
+  border-color: rgba(15,23,42,.28) !important;
+}
+
+/* 削除ボタンの枠も少し濃く */
+.card.members .del{
+  border-color: rgba(15,23,42,.24) !important;
+  color: rgba(15,23,42,.70) !important;
+}
   </style>
 </head>
 
